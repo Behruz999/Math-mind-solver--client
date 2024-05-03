@@ -1,9 +1,7 @@
 import './summary.css'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-// @ts-ignore
-import useSound from 'use-sound'
-import press_button_mp3 from '/press_button1.wav'
+import { play } from '../../player/play'
 
 // interface summariesProps {
 //   examplesCount: number
@@ -25,7 +23,6 @@ interface summaryProps {
 
 export const Summary = () => {
 
-  const [play] = useSound(press_button_mp3);
   const navigate = useNavigate()
   const [isHovered, setIsHovered] = useState(false);
   const [isHovered1, setIsHovered1] = useState(false);

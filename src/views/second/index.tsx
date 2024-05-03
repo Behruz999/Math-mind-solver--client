@@ -2,9 +2,7 @@ import './second.css'
 import { CiSettings } from "react-icons/ci";
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
-// @ts-ignore
-import useSound from 'use-sound'
-import press_button_mp3 from '/press_button1.wav'
+import { play } from '../../player/play';
 import { ChangeEvent } from 'react';
 import LogError from '../../errorLogger/bugFixer';
 import axios from 'axios';
@@ -17,7 +15,6 @@ interface customProps {
 }
 
 export const Second = () => {
-    const [play] = useSound(press_button_mp3)
     const navigate = useNavigate()
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
     const [shadowPosition, setShadowPosition] = useState({ x: 0, y: 0 })

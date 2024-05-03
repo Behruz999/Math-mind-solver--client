@@ -1,14 +1,11 @@
 import './home.css'
 import { useState } from 'react'
 import { FaArrowRightLong } from "react-icons/fa6"
-// @ts-ignore
-import useSound from 'use-sound'
 import { useNavigate } from 'react-router-dom'
-import press_button_mp3 from '/press_button1.wav'
+import { play } from '../../player/play'
 
 export const Home = () => {
   const [animationFinished, setAnimationFinished] = useState(false);
-  const [play] = useSound(press_button_mp3);
   const navigate = useNavigate()
 
   const handleAnimationEnd = () => {

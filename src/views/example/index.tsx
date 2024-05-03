@@ -1,8 +1,7 @@
 import './example.css'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import useSound from 'use-sound'
-import press_button_mp3 from '/press_button1.wav'
+import { play } from '../../player/play'
 import LogError from '../../errorLogger/bugFixer'
 import { URL } from '../../sets'
 import axios from 'axios'
@@ -52,7 +51,6 @@ export const Example = () => {
   //   return () => clearInterval(interval);
   // }, []); // Empty dependency array to run effect only once
 
-  const [play] = useSound(press_button_mp3);
   const navigate = useNavigate()
   const [time, setTime] = useState({ min: 0, sec: 0 });
   const [isHovered, setIsHovered] = useState(false);
