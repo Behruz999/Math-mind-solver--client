@@ -1,6 +1,7 @@
 import './home.css'
 import { useState } from 'react'
 import { FaArrowRightLong } from "react-icons/fa6"
+// @ts-ignore
 import useSound from 'use-sound'
 import { useNavigate } from 'react-router-dom'
 import press_button_mp3 from '/press_button1.wav'

@@ -2,6 +2,7 @@ import './second.css'
 import { CiSettings } from "react-icons/ci";
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
+// @ts-ignore
 import useSound from 'use-sound'
 import press_button_mp3 from '/press_button1.wav'
 import { ChangeEvent } from 'react';
