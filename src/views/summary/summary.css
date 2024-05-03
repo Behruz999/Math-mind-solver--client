@@ -1,0 +1,94 @@
+.summary_wrapper h4 {
+    margin-bottom: 0;
+}
+
+.summ_correct_count, .summ_correct_percent {
+    font-size: x-large;
+}
+
+.top_left {
+    width: fit-content;
+}
+
+.sum_kol12 {
+    text-align: center;
+}
+
+.summary_img {
+    width: 300px;
+}
+
+.summary_middle_place {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.sum_common {
+    margin-left: 50px;
+}
+
+.sum_kol3 {
+    margin-bottom: 50px;
+}
+
+.sum_user_answer {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.sum_question_place {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.sum_question {
+    margin-right: 10px;
+    /* Prevent text from wrapping */
+    white-space: nowrap;
+    /* Hide any overflow text */
+    /* overflow: hidden; */
+    /* Add ellipsis if text overflows */
+    text-overflow: ellipsis;
+}
+
+.xyz,
+.xyz1,
+.xyz2 {
+    display: flex;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sum_correct_answer,
+.sum_ball {
+    margin-left: 10px;
+}
+
+.zero {
+    color:  red;
+}
+
+.one {
+    color:  green;
+}
+
+.sum_ball_label,
+.sum_your_answer {
+    text-transform: capitalize;
+}
+
+
+
+
+@media (max-width: 767px) {
+    .sum_kol3>div {
+        margin: 0 30% !important;
+        /* Add some spacing between child elements */
+    }
+}

@@ -1,0 +1,157 @@
+@keyframes showTopText {
+    0% {
+        transform: translate3d(0, 100%, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(0, 50%, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes showBottomText {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Add this style to center the button and give it a smooth transition */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.animated-title {
+    color: #222;
+    font-family: Roboto, Arial, sans-serif;
+    height: 90vmin;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vmin;
+}
+
+.animated-title>div {
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.animated-title>div div {
+    font-size: 12vmin;
+    padding: 2vmin 0;
+    position: absolute;
+}
+
+.animated-title>div div span {
+    display: block;
+}
+
+.animated-title>div.text-top {
+    border-bottom: 1vmin solid #000;
+    top: 0;
+}
+
+.animated-title>div.text-top div {
+    animation: showTopText 1s;
+    animation-fill-mode: forwards;
+    /* Keep the last keyframe state */
+}
+
+.animated-title>div.text-top div span:first-child {
+    color: #767676;
+}
+
+.animated-title>div.text-bottom {
+    bottom: 0;
+}
+
+.animated-title>div.text-bottom div {
+    opacity: 0;
+    animation: showBottomText 1s;
+    animation-delay: 2s;
+    /* Delay the bottom text animation */
+    animation-fill-mode: forwards;
+    /* Keep the last keyframe state */
+}
+
+/* New styles for the advanced button animation */
+.animated-button-advanced {
+    /* Positioning */
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Button appearance */
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    /* Initial opacity and transition */
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Adjust margin as needed */
+    margin-top: 20px;
+}
+
+/* Animation to reveal the button */
+.animated-button-advanced.revealed {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.animated-button-advanced.revealed:hover .home_arrow_icon {
+    animation-play-state: paused;
+    transform: translateX(15px) !important;
+}
+
+/* Animation for the arrow icon */
+@keyframes arrowMove {
+    0% {
+        transform: translateX(-2px);
+    }
+
+    50% {
+        transform: translateX(3px);
+    }
+
+    100% {
+        transform: translateX(-3px);
+    }
+}
+
+.home_arrow_icon {
+    animation: arrowMove 3s linear infinite;
+    margin-left: 7px;
+    display: inline;
+}
+
+@media (min-width: 1000px) {
+    .animated-button-advanced {
+        left: 36% !important;
+        bottom: 4% !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .animated-button-advanced {
+        left: 29%;
+        bottom: 25% !important;
+    }
+}

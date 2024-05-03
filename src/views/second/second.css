@@ -1,0 +1,203 @@
+.second_wrapper .container {
+    align-items: initial !important;
+    /* Reset align-items to default */
+}
+
+.second_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.second_header_txt {
+    text-transform: capitalize;
+    font-size: x-large;
+}
+
+.settings_icon_place {
+    padding-left: 10px;
+}
+
+.settings_icon {
+    animation: rotateAnimation 10s linear infinite;
+}
+
+.settings_icon:hover {
+    animation: none;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.kol6 {
+    display: flex;
+    justify-content: center;
+}
+
+.part_headers {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.limit_number {
+    align-items: start;
+}
+
+.limit_body {
+    display: flex;
+    align-items: baseline;
+}
+
+.radios {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.inp_radio {
+    margin-right: 10px;
+}
+
+.or {
+    margin-right: 20px;
+}
+
+.operations {
+    padding: 50px 0;
+}
+
+.oper_label {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.selection {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.selection:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.generate_place {
+    text-align: center;
+}
+
+.start_btn {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.shadow {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.start_btn.hovered .shadow {
+    width: 100px;
+    height: 100px;
+}
+
+.inp_radio {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.inp_radio:focus {
+    border-color: #007bff;
+}
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .second_row {
+        display: block;
+    }
+
+    .kol6 {
+        display: block;
+        margin: 50px 0;
+    }
+
+    .radios,
+    .limit_body {
+        display: inline;
+    }
+
+    .labels {
+        font-size: 30px;
+    }
+
+    .inp_radio {
+        font-size: xx-large;
+    }
+
+    input[type="radio"] {
+        width: 20px;
+        /* Set the width */
+        height: 20px;
+        /* Set the height */
+    }
+
+    .limit_number {
+        text-align: center;
+    }
+
+    .oper_label,
+    .part_headers {
+        margin-bottom: 20px;
+        font-size: x-large;
+    }
+
+    .selection {
+        width: 350px;
+        border: 1px solid #ccc !important;
+        border-radius: 5px !important;
+        font-size: xx-large;
+    }
+
+    .or {
+        margin: 10px 0;
+        font-size: large;
+    }
+}
+
+@media (min-width: 1200px) {
+    .operations {
+        margin-left: 30px !important;
+    }
+}
