@@ -4,14 +4,14 @@ import { useNavigate } from 'react-router-dom'
 import useSound from 'use-sound'
 import press_button_mp3 from '/press_button1.wav'
 
-interface summariesProps {
-  examplesCount: number
-  min: number
-  sec: number
-  totalCorrect: number
-  percentCorrect: string
-  summaries: object[]
-}
+// interface summariesProps {
+//   examplesCount: number
+//   min: number
+//   sec: number
+//   totalCorrect: number
+//   percentCorrect: string
+//   summaries: object[]
+// }
 
 interface summaryProps {
   answer: number | string
@@ -32,7 +32,8 @@ export const Summary = () => {
   const [topbarPadding, setTopbarPadding] = useState(10); // Initial padding value
   const [scrollY, setScrollY] = useState(0); // State to track scroll position
   const [isReview, setIsReview] = useState<boolean>(false);
-  const summaries: summariesProps = JSON.parse(localStorage.getItem('summary'))
+  const summariesString = localStorage.getItem('summary');
+  const summaries = summariesString !== null ? JSON.parse(summariesString) : null;
 
   const handleMouseMove = (e: any) => {
     setShadowPosition({ x: e.nativeEvent.offsetX - 100, y: e.nativeEvent.offsetY - 100 });
@@ -108,8 +109,8 @@ export const Summary = () => {
               <div className="col-md-12 sum_kol12">
                 <img className='summary_img' src={
                   summaries?.percentCorrect == '0.00%' ?
-                  "/rag-doll-with-red-pencil-checklist-fotor-bg-remover-20240430201451.png" :
-                  "/rag-doll-with-checklist-green-pencil-fotor-bg-remover-20240430201428.png"
+                    "/rag-doll-with-red-pencil-checklist-fotor-bg-remover-20240430201451.png" :
+                    "/rag-doll-with-checklist-green-pencil-fotor-bg-remover-20240430201428.png"
                 } alt="0" />
 
                 <div className="summary_middle_place">

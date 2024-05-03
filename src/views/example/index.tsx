@@ -7,6 +7,13 @@ import LogError from '../../errorLogger/bugFixer'
 import { URL } from '../../sets'
 import axios from 'axios'
 
+interface ExampleProps {
+  num1: number | string;
+  num2: number | string;
+  operation: string;
+  userAnswer: number;
+}
+
 interface exampleProps {
   num1: number | string
   num2: number | string
@@ -22,7 +29,7 @@ interface timeProps {
 interface finishWorksProps {
   min: number | string
   sec: number | string
-  userAnswers: object[]
+  userAnswers: ExampleProps[];
 }
 
 export const Example = () => {
@@ -57,7 +64,8 @@ export const Example = () => {
     sec: 0,
     userAnswers: []
   });
-  const examples = JSON.parse(localStorage.getItem('ex'))
+  const storedData = localStorage.getItem('ex');
+  const examples = storedData ? JSON.parse(storedData) : null;
 
   const submit = async (finishTime: timeProps) => {
     try {
@@ -154,9 +162,9 @@ export const Example = () => {
 
 
   // Debounce function to delay execution of handleInputChange
-  const debounce = (fn, delay) => {
+  const debounce = (fn: Function, delay: number) => {
     let timerId: number;
-    return function (...args) {
+    return function (...args: any[]) {
       if (timerId) clearTimeout(timerId);
       timerId = setTimeout(() => {
         fn(...args);
