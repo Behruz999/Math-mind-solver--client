@@ -113,7 +113,7 @@
 /* Animation to reveal the button */
 .animated-button-advanced.revealed {
     opacity: 1;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50);
 }
 
 .animated-button-advanced.revealed:hover .home_arrow_icon {
@@ -152,6 +152,5 @@
 @media (max-width: 500px) {
     .animated-button-advanced {
         left: 29%;
-        bottom: 25% !important;
     }
 }

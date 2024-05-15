@@ -163,7 +163,8 @@
     }
 
     .inp_radio {
-        font-size: xx-large;
+        width: 100%;
+        font-size: x-large;
     }
 
     input[type="radio"] {
@@ -184,10 +185,11 @@
     }
 
     .selection {
-        width: 350px;
+        width: 100%;
         border: 1px solid #ccc !important;
         border-radius: 5px !important;
-        font-size: xx-large;
+        font-size: x-large;
+        background-color: #fff;
     }
 
     .or {
