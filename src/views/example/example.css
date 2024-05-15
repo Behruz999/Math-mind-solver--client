@@ -34,7 +34,8 @@
     width: 400px;
 }
 
-.not_refresh, .timer {
+.not_refresh,
+.timer {
     font-size: x-large;
 }
 
@@ -132,6 +133,7 @@
     text-align: center;
     border: none;
     outline: none;
+    background-color: #fff;
 }
 
 .response {
@@ -154,6 +156,7 @@
     border-radius: 5px;
     transition: border-color 0.3s ease-in-out;
     outline: none;
+    background-color: #fff;
 }
 
 .response:focus {
