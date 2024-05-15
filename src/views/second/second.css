@@ -138,6 +138,10 @@
     border-color: #007bff;
 }
 
+input[type="radio"].inp_radio {
+    background-color: #fff !important;
+}
+
 
 
 /* Medium devices (tablets, 768px and up) */
@@ -163,6 +167,7 @@
     .inp_radio {
         width: 100%;
         font-size: x-large;
+        background-color: #fff !important;
     }
 
     input[type="radio"] {
